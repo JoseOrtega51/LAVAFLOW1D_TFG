@@ -1,2 +1,2 @@
--DEFINE.h: Contiene la configuración de la simulación. Necasario adaptar al cambiar de fluido o geometría.
--functions.h: Contiene funciones de simulación.
+- DEFINE.h: Contiene la configuración de la simulación. Necesario adaptar al cambiar de fluido o geometría.
+- functions.h: Contiene funciones de simulación.
