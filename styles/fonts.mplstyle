@@ -1,0 +1,8 @@
+# Archivo con la configuración de las fuentes para las gráficas.
+
+font.size: 40
+font.family: serif
+
+mathtext.default: regular
+
+

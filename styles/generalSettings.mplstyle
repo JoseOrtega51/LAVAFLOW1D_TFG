@@ -1,0 +1,18 @@
+# Archivo con la configuración de estilos generales para las gráficas.
+
+figure.figsize: 11.67, 8.27
+savefig.dpi: 300
+savefig.bbox: tight
+
+figure.subplot.top: 0.9
+figure.subplot.right: 0.9
+figure.subplot.left: 0.15
+figure.subplot.bottom: 0.12
+figure.subplot.hspace: 0.4
+
+lines.linewidth: 2
+
+legend.framealpha: 1
+
+
+

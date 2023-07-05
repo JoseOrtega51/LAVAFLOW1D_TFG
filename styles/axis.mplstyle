@@ -1,0 +1,34 @@
+# Archivo con la configuración de estilos para los ejes de las gráficas.
+
+axes.axisbelow: True
+axes.labelcolor: black
+axes.edgecolor: black
+axes.linewidth: 2
+axes.grid: True
+
+xtick.direction: in
+xtick.top: True
+xtick.major.width: 2
+xtick.major.size: 10
+xtick.minor.visible: True
+xtick.minor.width: 2
+xtick.minor.size: 5
+
+ytick.direction: in
+ytick.right: True
+ytick.major.width: 2
+ytick.major.size: 10
+ytick.minor.visible: True
+ytick.minor.width: 2
+ytick.minor.size: 5
+
+xtick.labelsize: 30
+ytick.labelsize: 30
+
+ytick.color: black
+xtick.color: black
+
+
+
+
+
