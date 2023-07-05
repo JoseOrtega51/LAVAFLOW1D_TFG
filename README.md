@@ -5,6 +5,7 @@
 - Carpeta lib: Contiene un fichero de funciones y otro de configuración para complementar LAVAFLOW_1D.c
 - FIT_BINGHAM_PYTHON: Carpeta que incluye los archivos para calcular y ajustar el modelo reológico para un determinado perefil de temperatura.
 - gif.py: Realiza gifs de la simulación.
+
  Puede usar los siguientes modelos reológicos:
   * Fluido Newtoniano viscosidad constante. (1)
   * Fluido Bingham con viscosidad y esfuerzo umbral constantes. (2)
