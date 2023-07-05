@@ -10,5 +10,3 @@
   * Fluido Bingham con viscosidad y esfuerzo umbral constantes. (2)
   * Fluido Bingham con viscosidad y esfuerzo umbral variables asumiendo una temperatura constante en la columna. (3)
   * Fluido Bingham con viscosidad y esfuerzo umbral variables asumiendo un perfil de temperatura ajustable. (4)
-  
-  Nota: Si el esfuerzo umbral se toma nulo se trata de la Ley de Newton, por lo que se puede aplicar cualquiera de las variaciones de a fluidos newtonianos
