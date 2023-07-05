@@ -29,29 +29,29 @@ def tau_y(T,At,Bt,Ct):
     """
     return At+Bt*np.exp(Ct*T)
 
-# def mu(T,Au,Bu):
-#     """
-#     Viscosity dependence with temperature
+def mu(T,Au,Bu):
+    """
+    Viscosity dependence with temperature
 
-#     Parameters
-#     ----------
-#     T : float or array-like
-#         Temperature [K]
-#     Au : float
-#         Infinite temperature limit viscosity [Pa·s]
-#     Bu : float
-#         Exponential rate [K]
+    Parameters
+    ----------
+    T : float or array-like
+        Temperature [K]
+    Au : float
+        Infinite temperature limit viscosity [Pa·s]
+    Bu : float
+        Exponential rate [K]
 
-#     Returns
-#     -------
-#     array of floats
-#         Viscosity profile
+    Returns
+    -------
+    array of floats
+        Viscosity profile
 
-#     """
-#     return Au*np.exp(Bu/T)   
+    """
+    return Au*np.exp(Bu/T)   
 
-def mu(T,A_mu,B_mu):
-    return A_mu*np.exp(B_mu*T)
+# def mu(T,A_mu,B_mu):
+#     return A_mu*np.exp(B_mu*T)
 
 def du(z,Temp,tau_b,h,At,Bt,Ct,Au,Bu):
     """

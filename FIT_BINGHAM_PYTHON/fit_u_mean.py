@@ -7,7 +7,7 @@ Created on Thu Mar 23 15:04:56 2023
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize as so
-styles_path = r"C:\Users\pepeo\OneDrive - unizar.es\Universidad\04_CUART0\TFG\LAVAFLOW_1D"
+styles_path ="..\\"
 plt.style.use([styles_path+r"\styles\axis.mplstyle", styles_path+r"\styles\fonts.mplstyle", styles_path+r"\styles\generalSettings.mplstyle"])
 
 
@@ -27,17 +27,14 @@ U,T,h,tau=np.loadtxt(folder_name+"\\DATA.txt",usecols=(0,1,2,3),unpack=True)
 
 
 
-# 
-T_hot=1500.     #K LAVA
-# T_hot=1050.+273.15 #500. #Arb
-
-# T_hot=500
-T_bottom=800.
-T_air=300.
+#
+T_hot=1500.     #K
+T_bottom=800.   #K
+T_air=300.      #K
 
 N=40
 
-T_model=4
+T_model=5
 
 
 
@@ -147,33 +144,3 @@ print(np.sqrt(SME))
 file1 = open("DATA_FIT_BINGHAM.txt","w")
 file1.write("{}\t{}\t{}\t{}\t{}\t{}\t".format(A1,B1,n1,A2,B2,n2))
 file1.close()
-
-from lib.Bingham_model import du, tau_y, mu
-
-A_tau=0.        #Pa
-B_tau=2.5e6    #Pa
-C_tau=-0.00429   #K^-1
-A_mu=2e7      #Pa s
-B_mu=-5.02e-3    #K 
-T_hot=1500 
-
-v_T_mean=np.linspace(300,T_hot,N*2)
-tau_mean=np.zeros(len(v_T_mean))
-i=0
-for t in v_T_mean:
-    p1=2
-    p2=-3*(tau_y(t,A_tau,B_tau,C_tau)+2*mu(t,A_mu,B_mu)*0.1)
-    p3=0
-    p4=tau_y(t,A_tau,B_tau,C_tau)**3
-    aux=np.roots([p1,p2,p3,p4])
-    tau_mean[i]=aux[0]
-    i=i+1
-tau_fit=abs((0.1-parabola(v_T_mean/T_hot,A2,B2,n2))/pot_desp(v_T_mean/T_hot,A1,B1,n1))
-plt.figure(constrained_layout=True)
-plt.plot(v_T_mean,tau_mean,label="Temp. uniforme")
-plt.plot(v_T_mean,tau_fit,label="Perfil a tramos")
-plt.xlabel("$T$ (K)")
-plt.ylabel("$\\tau_b$ (Pa)")
-plt.legend(fontsize=30)
-plt.savefig("Compara_tau.pdf")
-plt.savefig("Compara_tau.svg")

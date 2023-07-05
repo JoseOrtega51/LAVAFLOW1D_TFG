@@ -1,0 +1,2 @@
+-DEFINE.h: Contiene la configuración de la simulación. Necasario adaptar al cambiar de fluido o geometría.
+-functions.h: Contiene funciones de simulación.
